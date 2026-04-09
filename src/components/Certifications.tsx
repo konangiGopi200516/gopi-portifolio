@@ -81,7 +81,17 @@ const Certifications: React.FC = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden card-hover"
             >
               <div className={`h-48 bg-gradient-to-br ${getCertColor(index)} flex items-center justify-center`}>
-                <FaCertificate className="text-white text-6xl" />
+                <img 
+                  src={`/images/${cert.image}.svg`} 
+                  alt={cert.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <FaCertificate className="text-white text-6xl hidden" />
               </div>
               
               <div className="p-6">

@@ -40,7 +40,17 @@ const Projects: React.FC = () => {
               className="bg-white rounded-xl shadow-lg overflow-hidden card-hover"
             >
               <div className="h-48 bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center">
-                <span className="text-white text-6xl font-bold">{project.title[0]}</span>
+                <img 
+                  src={`/images/${project.image}.svg`} 
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.nextElementSibling?.classList.remove('hidden');
+                  }}
+                />
+                <span className="text-white text-6xl font-bold hidden">{project.title[0]}</span>
               </div>
               
               <div className="p-6">

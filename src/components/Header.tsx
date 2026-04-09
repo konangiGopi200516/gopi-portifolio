@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         >
           <div className="mb-8">
               <img
-                src="https://img.sanishtech.com/u/d42323cd70e147be951df96ddd09d81c.jpeg"
+                src="/images/profile.jpg"
                 alt="Konangi Gopi"
                 className="w-40 h-40 mx-auto bg-white rounded-full flex items-center justify-center shadow-2xl object-cover border-4 border-purple-300"
               />
