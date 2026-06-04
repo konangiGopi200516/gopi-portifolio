@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -8,9 +8,23 @@ const Projects: React.FC = () => {
       title: "Blood Bank Management System",
       description: "Developed a full-featured Blood Bank Management System with donor registration, blood inventory tracking, user authentication, and request management using Spring Boot, React, and MySQL.",
       technologies: ["Spring Boot", "React", "MySQL", "RESTful APIs", "HTML", "CSS"],
-      github: "https://github.com/gopikonangi",
-      live: "#",
-      image: "bloodbank"
+      links: [
+        { label: "Frontend Code", url: "https://github.com/konangiGopi200516/bloodbank-frontend.git", icon: "github" },
+        { label: "Backend Code", url: "https://github.com/konangiGopi200516/bloodbank-backend.git", icon: "github" }
+      ],
+      image: "bloodbank",
+      bgColor: "from-red-400 to-pink-500"
+    },
+    {
+      title: "Kisan Mart - Agricultural E-Commerce",
+      description: "Created a full-stack agricultural e-commerce platform. Features include product catalog, shopping cart, JWT authentication, order tracking, and Cashfree payment integration. Built an admin dashboard for inventory and order management.",
+      technologies: ["React", "TypeScript", "Node.js", "Express.js", "Firebase"],
+      links: [
+        { label: "Live Demo", url: "https://gopi-agro-products.vercel.app", icon: "external" },
+        { label: "Source Code", url: "https://github.com/konangiGopi200516/gopi-portifolio.git", icon: "github" }
+      ],
+      image: "kisanmart",
+      bgColor: "from-green-400 to-emerald-500"
     }
   ];
 
@@ -39,7 +53,7 @@ const Projects: React.FC = () => {
               whileHover={{ y: -10 }}
               className="bg-white rounded-xl shadow-lg overflow-hidden card-hover"
             >
-              <div className="h-48 bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center">
+              <div className={`h-48 bg-gradient-to-br ${project.bgColor || 'from-indigo-400 to-purple-500'} flex items-center justify-center`}>
                 <img 
                   src={`/images/${project.image}.svg`} 
                   alt={project.title}
@@ -68,30 +82,21 @@ const Projects: React.FC = () => {
                   ))}
                 </div>
                 
-                <div className="flex justify-between items-center">
-                  <motion.a
-                    href="https://github.com/konangiGopi200516/bloodbank-frontend.git"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="flex items-center text-purple-600 hover:text-purple-700 transition-colors"
-                  >
-                    <FaGithub className="mr-2" />
-                    Frontend Code
-                  </motion.a>
-                  
-                  <motion.a
-                    href="https://github.com/konangiGopi200516/bloodbank-backend.git"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="flex items-center text-indigo-600 hover:text-indigo-700 transition-colors"
-                  >
-                    <FaGithub className="mr-2" />
-                    Backend Code
-                  </motion.a>
+                <div className="flex flex-wrap gap-4 items-center">
+                  {project.links && project.links.map((link, linkIndex) => (
+                    <motion.a
+                      key={linkIndex}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex items-center text-indigo-600 hover:text-indigo-700 transition-colors text-sm font-medium"
+                    >
+                      {link.icon === 'github' ? <FaGithub className="mr-2" /> : <FaExternalLinkAlt className="mr-2" />}
+                      {link.label}
+                    </motion.a>
+                  ))}
                 </div>
               </div>
             </motion.div>
