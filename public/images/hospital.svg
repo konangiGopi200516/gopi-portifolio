@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="hospGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#60a5fa;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#hospGrad)"/>
+  <!-- Hospital building -->
+  <rect x="140" y="100" width="120" height="130" rx="4" fill="white" fill-opacity="0.25"/>
+  <!-- Cross symbol -->
+  <rect x="185" y="55" width="30" height="90" rx="6" fill="white" fill-opacity="0.9"/>
+  <rect x="160" y="80" width="80" height="30" rx="6" fill="white" fill-opacity="0.9"/>
+  <!-- Door -->
+  <rect x="178" y="185" width="44" height="45" rx="3" fill="white" fill-opacity="0.35"/>
+  <!-- Windows -->
+  <rect x="152" y="120" width="28" height="28" rx="3" fill="white" fill-opacity="0.5"/>
+  <rect x="220" y="120" width="28" height="28" rx="3" fill="white" fill-opacity="0.5"/>
+  <text x="200" y="272" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Hospital Mgmt System</text>
+</svg>

@@ -26,9 +26,9 @@ const Skills: React.FC = () => {
       title: "Core Skills",
       icon: <FaTools className="text-purple-600" />,
       skills: [
-        { name: "Data Structures", level: 85 },
-        { name: "Problem Solving", level: 90 },
-        { name: "Algorithms", level: 80 }
+        { name: "Data Structures", level: 65 },
+        { name: "Problem Solving", level: 70 },
+        { name: "Algorithms", level: 60 }
       ]
     },
     {

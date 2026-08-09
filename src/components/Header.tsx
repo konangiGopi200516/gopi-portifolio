@@ -13,7 +13,7 @@ const Header: React.FC = () => {
         >
           <div className="mb-8">
               <img
-                src="https://img.sanishtech.com/u/9c287b4e44cf15f217de982a5dcb1e6e.png"
+                src="/pic.png"
                 alt="Konangi Gopi"
                 className="w-40 h-40 mx-auto bg-white rounded-full flex items-center justify-center shadow-2xl object-cover border-4 border-purple-300"
               />
@@ -68,8 +68,8 @@ const Header: React.FC = () => {
             className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-purple-50 transition-colors shadow-lg flex items-center mx-auto"
             onClick={() => {
               const link = document.createElement('a');
-              link.href = '/FINAL RESUME.pdf';
-              link.download = 'Konangi_Gopi_Resume.pdf';
+              link.href = '/Gopi_Resume.pdf';
+              link.download = 'Gopi_Resume.pdf';
               document.body.appendChild(link);
               link.click();
               document.body.removeChild(link);

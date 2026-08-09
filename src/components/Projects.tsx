@@ -25,6 +25,17 @@ const Projects: React.FC = () => {
       ],
       image: "kisanmart",
       bgColor: "from-green-400 to-emerald-500"
+    },
+    {
+      title: "Hospital Management System",
+      description: "Developed a full-stack Hospital Management System website with patient registration & discharge, bed occupancy tracking, appointment scheduling, staff management, and user authentication. Features an admin dashboard for real-time ward and inventory monitoring.",
+      technologies: ["Spring Boot", "React", "MySQL", "RESTful APIs", "HTML", "CSS"],
+      links: [
+        { label: "Live Demo", url: "https://gopi-hospital-management-system.vercel.app/", icon: "external" },
+        { label: "Source Code", url: "https://github.com/konangiGopi200516/gopi-hospital-management-system.git", icon: "github" }
+      ],
+      image: "hospital",
+      bgColor: "from-blue-400 to-cyan-500"
     }
   ];
 
