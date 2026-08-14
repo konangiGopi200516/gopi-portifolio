@@ -1,0 +1,6 @@
+# Allow all crawlers full access
+User-agent: *
+Allow: /
+
+# Point to the sitemap so Google can discover it automatically
+Sitemap: https://gopikonangiportifolio.vercel.app/sitemap.xml
